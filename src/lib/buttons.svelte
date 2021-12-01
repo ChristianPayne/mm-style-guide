@@ -12,6 +12,6 @@
 
   .mm-primary {
     /* @apply .mm-button; */
-    @apply bg-blue-400;
+    /* @apply bg-blue-400; */
   }
 </style>

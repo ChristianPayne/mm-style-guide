@@ -18,8 +18,8 @@ import Maps from './lib/maps.svelte';
 
   let pages = {
     // Test: Test,
-    Text: Text,
     Colors: Colors,
+    Text: Text,
     Buttons: Buttons,
     Modals: Modals,
     Toggles: Toggles,
@@ -46,7 +46,7 @@ import Maps from './lib/maps.svelte';
         </div>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           {#each Object.keys(pages) as page }
-            <button class="mr-5 hover:text-gray-900 border-2 rounded-md px-4 py-2 hover:bg-mm_blue {_pageName === page ? "bg-mm_blue" : ""}" on:click="{()=>{setPage(page)}}">{page}</button>
+            <button class="mr-5 rounded-md px-4 py-2 hover:bg-mm-accent hover:text-mm-background {_pageName === page ? "bg-mm-accent text-mm-background" : ""}" on:click="{()=>{setPage(page)}}">{page}</button>
           {/each}
         </nav>
       </div>
