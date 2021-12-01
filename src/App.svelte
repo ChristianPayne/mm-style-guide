@@ -11,19 +11,29 @@
   import Modals from './lib/modals.svelte';
   import Snackbars from './lib/snackbars.svelte';
   import Toggles from './lib/toggles.svelte';
+  import Inputs from './lib/inputs.svelte';
+  import Text from './lib/text.svelte';
+  import Colors from './lib/colors.svelte';
+import Maps from './lib/maps.svelte';
 
   let pages = {
+    // Test: Test,
+    Text: Text,
+    Colors: Colors,
     Buttons: Buttons,
     Modals: Modals,
     Toggles: Toggles,
     Snackbars: Snackbars,
-    Test: Test,
+    Inputs: Inputs,
+    Maps: Maps,
   };
 
   let _page = pages[Object.keys(pages)[0]]
+  let _pageName = Object.keys(pages)[0]
 
   function setPage (pageName) {
     _page = pages[pageName];
+    _pageName = pageName;
   }
 </script>
 
@@ -36,7 +46,7 @@
         </div>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           {#each Object.keys(pages) as page }
-            <button class="mr-5 hover:text-gray-900 border-2 rounded-md px-4 py-2 hover:bg-blue-400" on:click="{()=>{setPage(page)}}">{page}</button>
+            <button class="mr-5 hover:text-gray-900 border-2 rounded-md px-4 py-2 hover:bg-mm_blue {_pageName === page ? "bg-mm_blue" : ""}" on:click="{()=>{setPage(page)}}">{page}</button>
           {/each}
         </nav>
       </div>
