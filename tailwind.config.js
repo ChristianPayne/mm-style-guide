@@ -21,6 +21,9 @@ module.exports = {
           cyan: '#6fb7bc',
           pink: '#e2d6e7',
           purple: '#7c3aed',
+        },
+        disabled: {
+          DEFAULT: '#d8d8d8',
         }
       },
     },

@@ -12,6 +12,7 @@
 
   .mm-primary {
     /* @apply .mm-button; */
-    /* @apply bg-blue-400; */
+    @apply text-2xl;
+    /* @apply bg-mm-background; */
   }
 </style>

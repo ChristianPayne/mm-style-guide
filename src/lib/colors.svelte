@@ -12,6 +12,7 @@
     "accent-cyan",
     "accent-pink",
     "accent-purple",
+    "disabled"
   ]
 </script>
 

@@ -14,7 +14,7 @@
   import Inputs from './lib/inputs.svelte';
   import Text from './lib/text.svelte';
   import Colors from './lib/colors.svelte';
-import Maps from './lib/maps.svelte';
+  import Maps from './lib/maps.svelte';
 
   let pages = {
     // Test: Test,
