@@ -16,7 +16,7 @@
   ]
 </script>
 
-<div class="px-4 flex flex-col ">
+<div class="px-4 flex flex-wrap ">
   {#each colors as color}
     <div class="p-2">
       {color}
