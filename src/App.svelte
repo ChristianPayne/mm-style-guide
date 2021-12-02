@@ -12,8 +12,8 @@
 
   let pages = {
     // Test: Test,
-    Buttons: Buttons,
     Colors: Colors,
+    Buttons: Buttons,
     Text: Text,
     Modals: Modals,
     Toggles: Toggles,
@@ -25,27 +25,32 @@
   let _page = pages[Object.keys(pages)[0]]
   let _pageName = Object.keys(pages)[0]
 
+  let darkMode = false;
+
   function setPage (pageName) {
     _page = pages[pageName];
     _pageName = pageName;
   }
+
+  function toggleDarkMode () {
+    darkMode = !darkMode;
+  }
 </script>
 
-<section>
-    <header class="text-gray-600 body-font">
-      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <div class="flex font-medium items-center text-mm-text mb-4">
-          <img src={mmLogo} class="w-12">
-          <span class="ml-3 text-xl">Model Match Style Guide</span>
-        </div>
-        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          {#each Object.keys(pages) as page }
-            <button class="mr-5 rounded-md px-4 py-2 hover:bg-mm-accent hover:text-mm-background {_pageName === page ? "bg-mm-accent text-mm-background" : ""}" on:click="{()=>{setPage(page)}}">{page}</button>
-          {/each}
-        </nav>
+<main class="{darkMode ? "dark": ""}">
+  <div class="min-h-screen bg-mm-background dark:bg-mm-background-dark dark:text-mm-text-light flex relative overflow-auto">
+    <nav class="bg-mm-background dark:bg-mm-background-dark shadow-2xl p-4 justify-items-center">
+      <div class="md:flex font-medium items-center text-mm-text mb-4 cursor-pointer" on:click={()=>{toggleDarkMode();}}>
+        <img src={mmLogo} class="w-12 md:mr-2">
+        <span class="text-xl text-mm-text dark:text-mm-text-light">Model Match Style Guide</span>
       </div>
-    </header>
+      <div class="flex flex-col">
+        {#each Object.keys(pages) as page }
+          <button class="mr-5 rounded-md px-4 py-2 mb-2 hover:bg-mm-blue hover:text-mm-background text-center w-full {_pageName === page ? "bg-mm-blue text-mm-background" : ""}" on:click="{()=>{setPage(page)}}">{page}</button>
+        {/each}
+      </div>
+    </nav>
 
-    <svelte:component this={_page} />
-    
-  </section>
+    <svelte:component class="overflow-auto" this={_page} />
+  </div>
+</main>

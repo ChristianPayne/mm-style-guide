@@ -7,17 +7,17 @@
 
 <style>
   .mm-button {
-    @apply px-4 py-2 m-2 rounded-md hover:bg-mm-selection;
+    @apply px-4 py-2 m-2 rounded-md hover:bg-mm-selection hover:text-mm-text-light;
   }
   .mm-button-primary {
-    @apply bg-mm-accent text-mm-trim shadow-md;
+    @apply bg-mm-blue hover:bg-mm-blue-hover text-mm-text-light shadow-md;
   }
 
   .mm-button-secondary {
-    @apply bg-mm-accent-blue text-mm-trim shadow-md;
+    @apply bg-mm-lightblue hover:bg-mm-blue-hover text-mm-text-light shadow-md;
   }
 
   .mm-button-warn {
-    @apply bg-mm-warn text-mm-trim shadow-md;
-  }
+    @apply bg-mm-warn hover:bg-mm-warn-hover text-mm-text-light shadow-md;
+  } 
 </style>

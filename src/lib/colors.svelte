@@ -1,26 +1,27 @@
 <script>
   let colors = [
     "background",
-    "background-dark",
-    "trim",
-    "selection",
+    "background-trim",
     "text",
     "text-subtle",
-    "accent",
-    "accent-blue",
-    "accent-green",
-    "accent-cyan",
-    "accent-pink",
-    "accent-purple",
-    "disabled"
+    "selection",
+    "blue",
+    "lightblue",
+    "green",
+    "cyan",
+    "pink",
+    "purple",
+    "warn",
+    "disabled",
   ]
 </script>
 
-<div class="grid grid-cols-4 gap-4 p-8">
+<div class="px-4 flex flex-col ">
   {#each colors as color}
-  <div>
-    {color}
-    <div class="rounded-md bg-mm-{color} h-24 w-24"></div>
-  </div>
+    <div class="p-2">
+      {color}
+      <div class="rounded-md bg-mm-{color} hover:bg-mm-{color}-hover dark:bg-mm-{color}-dark h-24 w-24"></div>
+    </div>
   {/each}
+  <!-- <h1 class="bg-mm-background-trim">TEST</h1> -->
 </div>
