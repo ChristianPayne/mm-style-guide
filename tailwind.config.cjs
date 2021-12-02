@@ -1,6 +1,7 @@
-module.exports = {
-  purge: [],
-  darkMode: 'class', // or 'media' or 'class'
+const config = {
+  mode: "jit",
+  purge: ["./src/**/*.{html,js,svelte,ts}"],
+
   theme: {
     colors: {
       mm: {
@@ -24,13 +25,14 @@ module.exports = {
         },
         disabled: {
           DEFAULT: '#d8d8d8',
-        }
+        },
+        warn: '#ff0000', 
       },
     },
     extend: {},
   },
-  variants: {
-    extend: {},
-  },
+
   plugins: [],
-}
+};
+
+module.exports = config;

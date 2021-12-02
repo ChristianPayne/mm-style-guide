@@ -1,9 +1,3 @@
-<style>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-</style>
-
 <script>
   import Test from './lib/test.svelte';
   import mmLogo from './assets/modelmatch_logo_150ppi.png'
@@ -18,9 +12,9 @@
 
   let pages = {
     // Test: Test,
+    Buttons: Buttons,
     Colors: Colors,
     Text: Text,
-    Buttons: Buttons,
     Modals: Modals,
     Toggles: Toggles,
     Snackbars: Snackbars,
@@ -40,7 +34,7 @@
 <section>
     <header class="text-gray-600 body-font">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <div class="flex font-medium items-center text-mm-text mb-4">
           <img src={mmLogo} class="w-12">
           <span class="ml-3 text-xl">Model Match Style Guide</span>
         </div>
