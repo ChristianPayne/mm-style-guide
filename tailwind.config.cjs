@@ -3,19 +3,38 @@ const config = {
   purge: ["./src/**/*.{html,js,svelte,ts}"],
   darkMode: 'class',
 
+  variants: {
+    extend: {
+      ringWidth: ['hover'],
+    }
+  },
+
   theme: {
+    minWidth: {
+      '1/3': '33%',
+      '1/4': '25%',
+      '1/5': '20%',
+    },
+    maxWidth: {
+      '1/3': '33%',
+      '1/4': '25%',
+      '1/5': '20%',
+    },
     colors: {
       mm: {
         background: {
           DEFAULT:'#ffffff',
           dark:'#2d2d2d',
-          trim: '#f2f2f2',
+          trim: {
+            DEFAULT: '#f2f2f2',
+            dark: '#505050',
+          }
         },
         selection: '#acacaf',
         text: {
           DEFAULT: '#505050',
+          dark: '#ffffff',
           subtle: '#747678',
-          light: '#ffffff',
         },
         blue: {
           DEFAULT: '#4383a5',
