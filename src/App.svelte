@@ -1,24 +1,14 @@
 <script>
   import Test from './lib/test.svelte';
-  import mmLogo from './assets/modelmatch_logo_150ppi.png'
-  import Buttons from './lib/components/buttons.svelte';
-  import Modals from './lib/components/modals.svelte';
-  import Snackbars from './lib/components/snackbars.svelte';
-  import Toggles from './lib/components/toggles.svelte';
-  import Inputs from './lib/components/inputs.svelte';
-  import Text from './lib/text.svelte';
-  import Colors from './lib/colors.svelte';
+  import mmLogo from './assets/modelmatch_logo_150ppi.png';
   import Maps from './lib/maps.svelte';
 
+  import Core from './lib/core';
+  import Components from './lib/components'
+
   let pages = {
-    // Test: Test,
-    Modals: Modals,
-    Colors: Colors,
-    Buttons: Buttons,
-    Text: Text,
-    Toggles: Toggles,
-    Snackbars: Snackbars,
-    Inputs: Inputs,
+    ...Core,
+    ...Components,
     Maps: Maps,
   };
 
