@@ -1,11 +1,11 @@
 <script>
   import Test from './lib/test.svelte';
   import mmLogo from './assets/modelmatch_logo_150ppi.png'
-  import Buttons from './lib/buttons.svelte';
-  import Modals from './lib/modals.svelte';
-  import Snackbars from './lib/snackbars.svelte';
-  import Toggles from './lib/toggles.svelte';
-  import Inputs from './lib/inputs.svelte';
+  import Buttons from './lib/components/buttons.svelte';
+  import Modals from './lib/components/modals.svelte';
+  import Snackbars from './lib/components/snackbars.svelte';
+  import Toggles from './lib/components/toggles.svelte';
+  import Inputs from './lib/components/inputs.svelte';
   import Text from './lib/text.svelte';
   import Colors from './lib/colors.svelte';
   import Maps from './lib/maps.svelte';
