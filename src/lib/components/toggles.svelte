@@ -1,3 +1,1 @@
-<h1>
-  Toggles
-</h1>
+<h1>toggles</h1>

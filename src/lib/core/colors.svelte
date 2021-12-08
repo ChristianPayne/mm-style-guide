@@ -16,14 +16,13 @@
   ]
 </script>
 
-<div class="px-4 grid grid-flow-row grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+<div class="px-4 grid grid-flow-row grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-y-10 justify-items-center">
   {#each colors as color}
-    <div class="p-2 relative h-24 w-24">
-      <div class="absolute rounded-md bg-mm-{color} hover:bg-mm-{color}-hover dark:bg-mm-{color}-dark h-full w-full">
-        <h2 class="h-full w-full flex items-center justify-center">
-          {color}
-        </h2>
-      </div>
+    <div class="p-2 h-24 w-24">
+      <div class="rounded-md bg-mm-{color} hover:bg-mm-{color}-hover dark:bg-mm-{color}-dark h-full w-full"></div>
+      <h2 class="">
+        {color}
+      </h2>
     </div>
   {/each}
 </div>
